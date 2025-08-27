@@ -1,0 +1,126 @@
+
+---
+
+# index.html
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced CSS Project — ALX</title>
+
+  <!-- Google font fallback for Source Sans Pro (also load local copy in CSS if preferred) -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- helpful meta -->
+  <meta name="description" content="Advanced CSS project styled to match Figma design" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <img src="assets/images/logo.png" alt="Project logo" width="140" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+        <ul id="main-menu" class="nav-list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Your headline here (Spin-Cycle font)</h1>
+          <p class="hero-sub">Short descriptive subtitle that matches Figma copy.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#">Get started</a>
+            <a class="btn ghost" href="#">Learn more</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/images/hero-image.png" alt="Hero visual" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2 class="section-title">Features</h2>
+        <div class="grid features-grid">
+          <article class="feature-card">
+            <img src="assets/images/icon-1.png" alt="" />
+            <h3>Feature one</h3>
+            <p>Short explanation that mirrors Figma text.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/images/icon-2.png" alt="" />
+            <h3>Feature two</h3>
+            <p>Short explanation that mirrors Figma text.</p>
+          </article>
+          <article class="feature-card">
+            <img src="assets/images/icon-3.png" alt="" />
+            <h3>Feature three</h3>
+            <p>Short explanation that mirrors Figma text.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer CTA -->
+    <section id="contact" class="contact-cta">
+      <div class="container">
+        <div class="contact-inner">
+          <h2>Get in touch</h2>
+          <p>Short call to action or contact blurb.</p>
+          <form class="contact-form" action="#" method="post" aria-label="Contact form">
+            <label>
+              <span class="visually-hidden">Name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Email</span>
+              <input type="email" name="email" placeholder="Your email" required>
+            </label>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> ALX — Advanced CSS Project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple nav toggle (mobile)
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const open = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!open));
+        mainMenu.style.display = open ? 'none' : 'block';
+      });
+    }
+  </script>
+</body>
+</html>
