@@ -1,24 +1,21 @@
-# CSS Advanced — ALX Project
+# CSS Advanced Project
 
-**Directory:** `css_advanced`  
-**Repo:** `alx_html_css` (GitHub)
+This project is part of the **ALX HTML & CSS curriculum**.  
+It focuses on **styling a complete webpage** to match a Figma design using advanced CSS techniques.
 
-## Project overview
-This repository contains the advanced HTML/CSS exercise focused on styling a page to match a Figma design. You'll find an `index.html` scaffold and a starter `css/styles.css` that you should expand to match the Figma design exactly (spacing, colors, fonts).
+## Objectives
+- Practice advanced CSS styling
+- Implement responsive design
+- Reproduce a professional design from Figma
 
-## Figma design & assets
-- **Figma file:** (paste your Figma URL here — duplicate to Drafts)
-- **Images & icons:** Place exported images in `assets/images/`
-- **Fonts:** Place downloaded fonts in `fonts/`  
-  - `Source Sans Pro` (Google Fonts)  
-  - `Spin-Cycle-OT` (download from the Figma assets or assignment)
+## Figma Design
+The final project design can be found on Figma.  
+Here’s a sample visual of the expected layout:
 
-## How to run locally (Windows)
-Open PowerShell, then:
-```powershell
-cd C:\path\to\alx_html_css
-git checkout main
-cd css_advanced
-# Start a simple static server (optional, recommended)
-py -3 -m http.server 8000
-# Then open http://localhost:8000 in your browser
+![Figma Design Preview](https://i.ibb.co/gTDZZT8/ALX-Figma.png)
+
+## Files
+- `index.html` → contains the full HTML structure
+- `css/styles.css` → contains all styling
+- `README.md` → documentation for the project
+
