@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechCon 2024 — CSS Advanced</title>
+
+  <!-- Fonts: Source Sans Pro via Google; Spin Cycle OT you can install locally or load via @font-face -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Optional stylesheet you will create while styling (not required by this task, but handy) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Minimal inline reset so the page is readable before you add styles.css */
+    :root { --spacing: 1rem; }
+    html, body { margin: 0; padding: 0; font-family: 'Source Sans Pro', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    header, main, footer { padding: var(--spacing); }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; }
+    a { text-decoration: none; }
+    .hero { padding: calc(var(--spacing) * 2) var(--spacing); }
+    .logo { max-height: 40px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav aria-label="Primary">
+      <a href="#" aria-label="TechCon Home">
+        <!-- Replace with your actual logo from images/ once downloaded -->
+        <img src="images/logo.png" alt="TechCon logo" class="logo">
+      </a>
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" role="region" aria-label="Hero">
+    <h1>Welcome to TechCon 2024</h1>
+    <p>The premier conference for innovators and technology leaders.</p>
+    <button type="button">Register Now</button>
+  </section>
+
+  <!-- Main content -->
+  <main id="main-content">
+    <section aria-labelledby="about-title">
+      <h2 id="about-title">About the Conference</h2>
+      <p>TechCon 2024 brings together experts across AI, web, cloud, and security. Explore the latest trends, attend workshops, and connect with peers.</p>
+      <!-- Example image area; replace src with your asset -->
+      <figure>
+        <img src="images/hero.jpg" alt="Attendees networking at a tech conference" style="max-width:100%;height:auto;">
+        <figcaption>Networking and knowledge sharing at TechCon.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="highlights-title">
+      <h2 id="highlights-title">Highlights</h2>
+      <article>
+        <h3>Keynotes</h3>
+        <p>Hear from leading voices shaping the future of technology and society.</p>
+      </article>
+      <article>
+        <h3>Workshops</h3>
+        <p>Hands-on sessions to level up your skills with guidance from industry experts.</p>
+      </article>
+      <article>
+        <h3>Community</h3>
+        <p>Meet founders, engineers, designers, and students from around the world.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>copyright © 2024 TechCon. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
